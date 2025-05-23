@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-transform: capitalize;
+    transition: .2s linear;
   }
   
   body {
@@ -45,9 +47,9 @@
   
   /* Hero Section */
   .hero {
-    background-image: url(http://www.placerespr.com/wp-content/uploads/2017/06/coffee-1572748_1280.jpg);
+    background-image: url(https://werqwise.com/wp-content/uploads/2023/11/AdobeStock_315403482-scaled.jpeg);
     background-repeat: no-repeat;
-    min-height: 80vh;
+    min-height: 100vh;
     background-size: 100vw 90vh;
     display: flex;
     color: white;
@@ -58,16 +60,38 @@
   .hero h2 {
     font-size: 48px;
     margin-bottom: 20px;
-    margin-left: 30px;
+    margin-left: 50px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transform: none;
+    animation: animate 2s linear;
   }
+
+  @keyframes animate {
+    0%{
+      transform: scaleX(0) scaleY(0.5);
+
+    }
+
+    100%{
+      transform: scaleX(0.5) scaleY(0.5);
+    }
+  }
+ 
   
   .hero p {
     font-size: 24px;
     margin-bottom: 30px;
-    margin-left: 30px;
+    margin-left: 50px;
     font-family: 'Times New Roman', Times, serif;
+
+    animation: rotate 3s;
   }
+  @keyframes rotate {
+    0%{
+      transform: rotate(360deg);
+    }
+  }
+ 
   
   .hero button {
     background-color: #f0a500;
@@ -76,7 +100,7 @@
     font-size: 18px;
     border: none;
     cursor: pointer;
-    margin-left: 30px;
+    margin-left: 50px;
   }
   
   .hero button:hover {
@@ -129,9 +153,11 @@
   
   /* About Section */
   #about {
-    background-color: #f4f4f4;
+    background-color: #493106;
+    color: #fff;
     padding: 50px 20px;
     text-align: center;
+    min-height: 30vh;
   }
   
   #about h2 {
